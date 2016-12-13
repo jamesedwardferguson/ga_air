@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="container center">
 
-<p>
-  <strong>Row:</strong>
-  <%= @airplane.row %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Column:</strong>
-  <%= @airplane.column %>
-</p>
+  <p>
+    <strong>Row:</strong>
+    <%= @airplane.row %>
+  </p>
 
-<p>
-  <strong>Plane num:</strong>
-  <%= @airplane.plane_num %>
-</p>
+  <p>
+    <strong>Column:</strong>
+    <%= @airplane.column %>
+  </p>
 
-<%= link_to 'Edit', edit_airplane_path(@airplane) %> |
-<%= link_to 'Back', airplanes_path %>
+  <p>
+    <strong>Plane num:</strong>
+    <%= @airplane.plane_num %>
+  </p>
+
+  <%= link_to 'Edit', edit_airplane_path(@airplane) %> |
+  <%= link_to 'Back', airplanes_path %>
+ </div>
+<div>

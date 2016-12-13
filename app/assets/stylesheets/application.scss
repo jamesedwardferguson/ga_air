@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import "materialize";
+
+
+body{
+
+background: image-url("flames.jpg");
+background-size: cover;
+}
+
+div.card-panel{
+opacity: 0.8;
+
+}

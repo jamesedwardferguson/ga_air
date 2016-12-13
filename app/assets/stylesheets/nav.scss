@@ -1,0 +1,33 @@
+
+nav{
+ padding:0 40px;
+}
+.active:not(ul){
+height:62px;
+}
+
+body nav form {
+  position: relative;
+	padding-left: 30px;
+}
+
+body nav form i.material-icons {
+  width: 30px;
+  display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body nav div.input-field {
+  display: inline-block;
+  color: white;
+  overflow: hidden;
+  width:160px;
+}
+
+ul.right, ul.right > li {
+  height: 100%;
+  padding-top: 10px;
+}
+

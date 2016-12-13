@@ -1,0 +1,45 @@
+<!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+<% if @current_user.present? %>
+    <li><%= link_to "My Profile", user_path(@current_user) %> </li>
+    <li><%= link_to "My Reservations", user_reservations_path(@current_user) %> </li>
+    <li class="divider"></li>
+    <li><%= link_to "View Planes", airplanes_path %> </li>
+    <li class="divider"></li>
+    <li><%= link_to "Logout" , login_path, :method => :delete %></li>
+<% end %>
+  </ul>
+<nav class="blue darken-4">
+  <div class="nav-wrapper">
+    <%=link_to "EMU AIR", root_path, class:"brand-logo"  %>
+    <ul class="right hide-on-med-and-down">
+      <% if @current_user.present? %>
+      <li>
+    <div class="nav-wrapper">
+      <%= form_tag "/search", :method => "GET" do %>
+        <label for="search"><i class="material-icons">search</i></label>
+              <div class="input-field">
+                <%= text_field_tag :tag %>
+              </div>
+            <% end %>
+
+    </div>
+      </li>
+    <% end %>
+      <% unless @current_user.present? %>
+         <li><%= link_to "Login", login_path %> </li>
+         <li><%= link_to "Sign Up", new_user_path %></li>
+     <% else %>
+        <li><%= link_to "Home", root_path %> </li>
+        <li><%= link_to "Members", users_path %></li>
+         <li><%= link_to "Galleries", galleries_path %> </li>
+         <li><%= link_to "Photos", photos_path %> </li>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+         <!-- Dropdown Trigger -->
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><%= full_name(@current_user) %><i class="material-icons right">arrow_drop_down</i></a></li>
+     <% end %>
+    </ul>
+  </div>
+</nav>
+
+

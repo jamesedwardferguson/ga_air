@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="container center">
+
+<h3>Login</h3>
+
+<div class="card-panel">
+<%= form_tag login_path do %>
+  <p>
+   <%= label_tag :email %>
+   <%= email_field_tag :email, "", :required => true %>
+   </p>
+   <p>
+   <%= label_tag :password%>
+   <%= password_field_tag :password, "",  :required => true %>
+  </p>
+ <%= submit_tag "Login", class: "waves-effect waves-light btn blue darken-4" %>
+<% end %>
+</div>
+
+</div>

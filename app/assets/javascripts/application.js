@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require materialize
 //= require underscore
 //= require backbone
 //= require_tree ./models
@@ -19,3 +20,4 @@
 //= require_tree ./views
 //= require_tree ./routers
 //= require_tree .
+
