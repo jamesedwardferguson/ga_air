@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20161213061715) do
 
   create_table "airplanes", force: :cascade do |t|
     t.integer  "row"
-    t.string   "column"
+    t.integer  "column"
     t.integer  "plane_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20161213061715) do
   create_table "reservations", force: :cascade do |t|
     t.integer  "flight_id"
     t.integer  "user_id"
+    t.integer  "res_col"
+    t.integer  "res_row"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
