@@ -14,13 +14,12 @@ app.SeatView = Backbone.View.extend({
 });
 
 
-// var rows = this.model.get('row');
-// var columns = this.model.get('column');
-// console.log(rows);
+var rows = this.model.get('row');
+var columns = this.model.get('column');
+console.log(rows);
 
-// for (i = 0; i < .rows; i++) {
-//       var _row = $();
-//     }
-//       for (j = 0; j < .columns; j++) {
-//         var _column
-//       }
+var seats = [];
+  for (i = 0; i < this.row.length; i++) {
+      for (j = 0; j < this.column.length; j++) {
+      }
+      }
