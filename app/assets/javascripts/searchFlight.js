@@ -13,6 +13,7 @@ $(document).ready(function(){
 
   app.router = new app.Router();
   Backbone.history.start();
+  
   // Here is when they want to pay attention to the hash fragments
 
   // window.setInterval( function(){
