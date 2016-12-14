@@ -9,9 +9,16 @@ app.Flights = Backbone.Collection.extend({
 
     this.on("add", function(flight){
       var fv = new app.FlightView({
-        model: Flight
+        model: flight
       });
       fv.render();
     });
-  }
+  },
+
+  // filterSearch: function(origin){
+  //   var matchedResult = this.filter(function(flight){
+  //     return flight.attributes.origin.index(origin) !== -1;
+  //   });
+  //   return new app.Flights(matchedResult);
+  // }
 });

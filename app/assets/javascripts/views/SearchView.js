@@ -9,9 +9,12 @@ app.SearchView = Backbone.View.extend({
 
     // Get HTML from #searchViewTemplate
     // Set the HTML of this.$el to that h
-    var searchViewTemplate = $('#searchViewTemplate').html();
+    var searchViewTemplate = $('#SearchViewTemplate').html();
     console.log(searchViewTemplate);
     this.$el.html(searchViewTemplate);
+
+    var siv = new app.SearchInputView();
+    siv.render();
   }
 
 });
