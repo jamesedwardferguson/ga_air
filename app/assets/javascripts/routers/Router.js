@@ -31,6 +31,5 @@ app.Router = Backbone.Router.extend({
   //   seatView.render();
   // }
 
-  }
 
 });
