@@ -4,7 +4,7 @@
 
   <p>
     <strong>Plane:</strong>
-    <%= @flight.plane_id %>
+    <%= full_plane_name(@flight.airplane) %>
   </p>
 
   <p>
@@ -28,6 +28,6 @@
   </p>
 
   <%= link_to 'Edit', edit_flight_path(@flight), :class => "btn blue darken-4" %> |
-  <%= link_to 'Back', flights_path, :class => "button blue darken-4" %>
+  <%= link_to 'Back', flights_path, :class => "btn blue darken-4" %>
   </div>
 </div>

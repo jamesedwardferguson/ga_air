@@ -1,9 +1,9 @@
 <div class="container center">
-
+ <div class="card-panel">
     <p id="notice"><%= notice %></p>
 
   <p>
-    <strong>Plane</strong>
+    <strong>Plane:</strong>
     <%= full_plane_name(@airplane) %>
   </p>
   <p>
@@ -20,6 +20,7 @@
     <%= @airplane.column %>
   </p>
 
+  <%= link_to 'Flights', flights_path(@airplane.id), :class => "btn blue darken-4"  %> |
   <%= link_to 'Edit', edit_airplane_path(@airplane), :class => "btn blue darken-4"  %> |
   <%= link_to 'Back', airplanes_path, :class => "btn blue darken-4"  %>
  </div>

@@ -7,8 +7,11 @@ class FlightsController < ApplicationController
   # GET /flights
   # GET /flights.json
   def index
-    @flights = Flight.all
-    @airplane = Airplane.find(params[:airplane_id])
+    if params[:id].present?
+     @flights = Flight.where(airplane_id: params[:id])
+    else
+     @flights = Flight.all
+    end
   end
 
   # GET /flights/1

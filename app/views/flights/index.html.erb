@@ -25,9 +25,10 @@
         <td><%= flight.origin %></td>
         <td><%= flight.destination %></td>
         <td><%= flight.departure_date %></td>
-        <td><%= link_to 'Show', airplane_flight_path(@airplane, flight), :class => "btn blue darken-4" %></td>
-        <td><%= link_to 'Edit', edit_airplane_flight_path(@airplane, flight), :class => "btn blue darken-4" %></td>
-        <td><%= link_to 'Destroy', airplane_flight_path(@airplane, flight), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue darken-4" %></td>
+        <td><%= link_to 'Show', flight_path(flight), :class => "btn blue darken-4" %></td>
+        <td><%= link_to 'Edit', edit_flight_path(flight), :class => "btn blue darken-4" %></td>
+        <td><%= link_to 'Destroy', flight_path(flight), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue darken-4" %></td>
+  end
       </tr>
     <% end %>
   </tbody>
@@ -35,6 +36,6 @@
 
 <br>
 
-<%= link_to 'New Flight', new_airplane_flight_path, :class => "btn blue darken-4"%>
+<%= link_to 'New Flight', new_flight_path, :class => "btn blue darken-4"%>
   </div>
 </div>

@@ -8,11 +8,10 @@ Rails.application.routes.draw do
   delete "/login" => "sessions#destroy"
 
   get "/search" => "flights#home"
-  resources :users do
-    resources :reservations
-  end
+  resources :users
+  resources :reservations
 
-  resources :airplanes do
-   resources :flights
-  end
+  resources :airplanes
+  resources :flights
+
 end
