@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   resources :airplanes
   resources :flights
 
-  get "/flights" => 'reservations#flight'
+  get "/seats" => 'reservations#flight'
   end
