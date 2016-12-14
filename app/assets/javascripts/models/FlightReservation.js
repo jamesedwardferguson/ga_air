@@ -3,7 +3,8 @@ var app = app || {};
 app.Reservation = Backbone.Model.extend({
   urlRoot: "/flights",
   default:{
-    reservation: ""
+    row: 1,
+    column: 2
   },
   initialize: function (){
     console.log("A new seat was taken");

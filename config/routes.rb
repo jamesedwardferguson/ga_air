@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   get "/search" => "flights#home"
   resources :users
   resources :reservations
-
   resources :airplanes
   resources :flights
 
-  get "/flights" => 'reservations#flight'
+  get "/emu" => 'pages#emu'
+
   end
