@@ -10,6 +10,8 @@ app.Router = Backbone.Router.extend({
     '*error': 'error'
   },
 
+
+
   showFlightPlan: function ( id ) {
     // Create a new instance of a new view
     // Render it.
@@ -21,10 +23,14 @@ app.Router = Backbone.Router.extend({
   initializeApp: function() {
     var appView = new app.AppView();
     appView.render();
+
   },
 
   // initializeSelectSeat: function(){
   //   var seatView = new app.SeatView();
   //   seatView.render();
   // }
+
+  }
+
 });
