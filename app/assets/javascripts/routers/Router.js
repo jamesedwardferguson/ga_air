@@ -3,11 +3,11 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
 
   routes: {
-
     '': 'initializeApp',
     'search': 'initializeSearchFlights',
     'flights/:id': 'showFlightPlan',
     '*error': 'error'
+  },
 
   showFlightPlan: function ( id ) {
     // Create a new instance of a new view
@@ -20,4 +20,4 @@ app.Router = Backbone.Router.extend({
     var appView = new app.AppView();
     appView.render();
   },
-};
+});
