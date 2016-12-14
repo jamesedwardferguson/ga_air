@@ -1,6 +1,6 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorise, only: [:edit, :update]
   # GET /airplanes
   # GET /airplanes.json
   def index
@@ -70,5 +70,12 @@ class AirplanesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def airplane_params
       params.require(:airplane).permit(:row, :column, :plane_num, :plane_type)
+    end
+
+    def authorise
+      unless @current_user.present?
+      flash[:error] = "You need to be logged in to do that"
+      redirect_to login_path
+      end
     end
 end

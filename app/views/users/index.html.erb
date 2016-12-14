@@ -4,7 +4,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h2>All Users</h2>
 
 <table>
   <thead>
@@ -20,9 +20,7 @@
       <tr>
         <td><%= full_name(user) %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user, :class => "btn blue darken-4" %></td>
-        <td><%= link_to 'Edit', edit_user_path(user), :class => "btn blue darken-4"  %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue darken-4"  %></td>
+        <td><%= link_to 'View Profile', user, :class => "btn blue darken-4" %></td>
       </tr>
     <% end %>
   </tbody>

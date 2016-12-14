@@ -1,6 +1,11 @@
-<h1>Editing Reservation</h1>
+<div class="container center">
+ <div class="card-panel">
+<h2>Edit Reservation</h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @reservation %> |
-<%= link_to 'Back', reservations_path %>
+<%= link_to 'Show', @reservation, :class => "btn blue darken-4"  %> |
+<%= link_to 'Back', reservations_path, :class => "btn blue darken-4"  %>
+
+ </div>
+</div>

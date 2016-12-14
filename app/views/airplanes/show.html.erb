@@ -1,7 +1,7 @@
 <div class="container center">
  <div class="card-panel">
     <p id="notice"><%= notice %></p>
-
+  <h2>Plane</h2>
   <p>
     <strong>Plane:</strong>
     <%= full_plane_name(@airplane) %>
@@ -20,7 +20,8 @@
     <%= @airplane.column %>
   </p>
 
-  <%= link_to 'Edit', edit_airplane_path(@airplane), :class => "btn blue darken-4"  %> |
+<%= link_to 'Edit', edit_airplane_path(@airplane), :class => "btn blue darken-4"  %> |
+<%= link_to 'Destroy', @airplane, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue darken-4"  %> |
   <%= link_to 'Back', airplanes_path, :class => "btn blue darken-4"  %>
  </div>
 <div>
