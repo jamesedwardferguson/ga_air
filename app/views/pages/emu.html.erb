@@ -1,6 +1,39 @@
 <div id="app">
-  <h1>This is where Backbone should be loaded</h1>
+  <h1>Flight Reservation</h1>
 </div>
+
+<!-- Display all the available flights -->
+<script type="html/template" id="SearchViewTemplate">
+<div id="searchForm">
+  An instance of searchInputView should be loaded here
+</div>
+
+<div id="flights">
+  <table>
+    <thead>
+      <tr>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Flight No</th>
+        <th>Date</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody id="showFlight">
+    </tbody>
+  </table>
+
+</div>
+</script>
+
+<!-- Search Flight -->
+<script type="html/template" id="SearchInputTemplate">
+  <input type="text" placeholder="origin" id="origin"/>
+  <input type="text" placeholder="destination" id="destination"/>
+
+  <button>Submit</button>
+</script>
 
 <script type="html/template" id="AppViewTemplate">
   <h1>Emu Air seating plan</h1>
@@ -13,6 +46,8 @@
   </ul>
 </script>
 
+
+<!-- For chossing a seat after a flight is clicked -->
 <script type="html/template" id="SeatInputViewTemplate">
   <textarea placeholder="Please select yur seat"></textarea>
   <button>Submit</button>

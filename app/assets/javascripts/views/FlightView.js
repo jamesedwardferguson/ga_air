@@ -15,7 +15,8 @@ app.FlightView = Backbone.View.extend({
 
     var flight_num = this.model.get("flight_num");
     var $a = $("<a>").text(flight_num);
-    $a.attr("src", "flight_path(flight_num)");
+    $a.attr("id", "selectedFlight");
+    $a.attr("src", "#");
     var $flight_num = $("<td>").html($a);
     this.$el.append($flight_num);
 
@@ -24,7 +25,19 @@ app.FlightView = Backbone.View.extend({
     var $date = $("<td>").text(date);
     this.$el.append($date);
     this.$el.prependTo("#showFlight");
-  }
+  },
+
+  events: {
+    'click #selectedFlight': 'selectSeatPage'
+  },
+
+  selectSeatPage: function(){
+    app.router.navigate("/flights/" + this.model.get('id'), true);
+    // We need to create a reservations collection.
+    // Then we need to render a view for every reservation in that collection (the seats on the flight)
+
+  },
+
 
 });
 
@@ -36,5 +49,6 @@ var createFlightView = function() {
     fv.render();
   });
 };
+
 
 // You should see this comment
