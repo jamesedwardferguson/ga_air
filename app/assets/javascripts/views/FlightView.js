@@ -2,24 +2,28 @@ var app = app || {};
 
 app.FlightView = Backbone.View.extend({
 
-  tagName: 'td',
+  tagName: 'tr',
 
   render: function(){
     var origin = this.model.get("origin");
-    this.$el.text(origin);
-    this.$el.prependTo("#showFlight");
+    var $origin = $("<td>").text( origin );
+    this.$el.append( $origin );
 
-    // var destination = this.model.get("destination");
-    // this.$el.text(destination);
-    // this.$el.prependTo("#showFlight");
-    //
-    // var flight_num = this.model.get("flight_num");
-    // this.$el.text(flight_num);
-    // this.$el.prependTo("#showFlight");
-    //
-    // var date = this.model.get("departure_date");
-    // this.$el.text(date);
-    // this.$el.prependTo("#showFlight");
+    var destination = this.model.get("destination");
+    var $destination = $("<td>").text( destination );
+    this.$el.append($destination);
+
+    var flight_num = this.model.get("flight_num");
+    var $a = $("<a>").text(flight_num);
+    $a.attr("src", "flight_path(flight_num)");
+    var $flight_num = $("<td>").html($a);
+    this.$el.append($flight_num);
+
+    var date = this.model.get("departure_date");
+
+    var $date = $("<td>").text(date);
+    this.$el.append($date);
+    this.$el.prependTo("#showFlight");
   }
 
 });
