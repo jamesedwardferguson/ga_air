@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorise, only: [:edit, :destroy]
   # GET /users
   # GET /users.json
   def index
@@ -71,4 +71,17 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
+
+    def authorise
+      unless @current_user.present?
+      flash[:error] = "You need to be logged in to do that"
+      redirect_to login_path
+      end
+    end
 end
+
+
+
+
+
+

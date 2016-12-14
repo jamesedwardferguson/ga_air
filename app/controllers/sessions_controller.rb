@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
    if user.present? && user.authenticate(params[:password])
      flash[:success] = "You successfully logged in"
       session[:user_id] = user.id
-      redirect_to user
+      redirect_to '/emu'
     else
       flash[:error] = "The password or email was incorrect"
       render :new

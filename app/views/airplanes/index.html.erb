@@ -3,7 +3,7 @@
 
   <p id="notice"><%= notice %></p>
 
-  <h1>Listing Airplanes</h1>
+  <h2>All Airplanes</h2>
 
   <table>
     <thead>
@@ -20,8 +20,6 @@
           <td><%= full_plane_name(airplane) %></td>
           <td><%= num_seats(airplane) %></td>
           <td><%= link_to 'Show', airplane, :class => "btn blue darken-4"  %></td>
-          <td><%= link_to 'Edit', edit_airplane_path(airplane), :class => "btn blue darken-4"  %></td>
-          <td><%= link_to 'Destroy', airplane, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue darken-4"  %></td>
         </tr>
       <% end %>
     </tbody>

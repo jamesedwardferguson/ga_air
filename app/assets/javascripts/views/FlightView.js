@@ -20,7 +20,7 @@ app.FlightView = Backbone.View.extend({
     var $flight_num = $("<td>").html($a);
     this.$el.append($flight_num);
 
-    var date = this.model.get("departure_date");
+    var date = moment( this.model.get("departure_date") ).format('Do MMM YYYY');
 
     var $date = $("<td>").text(date);
     this.$el.append($date);
