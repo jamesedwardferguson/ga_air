@@ -13,6 +13,9 @@ app.SearchInputView = Backbone.View.extend({
     var inputOrigin = this.$el.find("#origin").val();
     console.log(inputOrigin);
     var inputDestination = this.$el.find("#destination").val();
+
+    // get flights.where({:desination => inputDestination, :origin => inputDestination})
+    // re-render the flight list view 
   },
 
   render: function(){
