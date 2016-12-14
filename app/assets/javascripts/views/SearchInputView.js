@@ -11,7 +11,7 @@ app.SearchInputView = Backbone.View.extend({
 
   searchFlight: function(e){
     var inputOrigin = this.$el.find("#origin").val();
-
+    console.log(inputOrigin);
     var inputDestination = this.$el.find("#destination").val();
   },
 
