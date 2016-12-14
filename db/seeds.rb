@@ -1,6 +1,6 @@
 User.destroy_all
 
-  User.create({
+u1 = User.create({
     first_name: "Tim",
     last_name: "Silva",
     email: "silva.tim@gmail.com",
@@ -8,8 +8,8 @@ User.destroy_all
     password_confirmation: "chicken"
   });
 
-5.times do
-  User.create({
+
+u2 = User.create({
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
@@ -17,7 +17,28 @@ User.destroy_all
     password_confirmation: "chicken"
   });
 
-end
+u3 = User.create({
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password:"chicken",
+    password_confirmation: "chicken"
+  });
+
+u4 = User.create({
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password:"chicken",
+    password_confirmation: "chicken"
+  });
+u5 = User.create({
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password:"chicken",
+    password_confirmation: "chicken"
+  });
 
 Airplane.destroy_all
 
@@ -59,7 +80,7 @@ a5 = Airplane.create({
 
 Flight.destroy_all
 
-Flight.create({
+f1 = Flight.create({
   flight_num: Faker::Number.number(2),
   origin:"MEL",
   destination:"SYD",
@@ -67,7 +88,7 @@ Flight.create({
   airplane_id: a1.id
 });
 
-Flight.create({
+f2 = Flight.create({
   flight_num: Faker::Number.number(2),
   origin:"CBR",
   destination:"MEL",
@@ -75,7 +96,7 @@ Flight.create({
   airplane_id: a2.id
 });
 
-Flight.create({
+f3 = Flight.create({
   flight_num: Faker::Number.number(2),
   origin:"BNE",
   destination:"SYD",
@@ -83,10 +104,47 @@ Flight.create({
   airplane_id: a3.id
 });
 
-Flight.create({
+f4 = Flight.create({
   flight_num: Faker::Number.number(2),
   origin:"AL",
   destination:"SYD",
   departure_date:Faker::Date.forward(20),
   airplane_id: a4.id
+});
+
+Reservation.destroy_all
+
+Reservation.create({
+  flight_id:f2.id,
+  user_id:u2.id,
+  res_col:8,
+  res_row:3
+});
+
+Reservation.create({
+  flight_id:f4.id,
+  user_id:u4.id,
+  res_col:1,
+  res_row:5
+});
+
+Reservation.create({
+  flight_id:f3.id,
+  user_id:u4.id,
+  res_col:9,
+  res_row:2
+});
+
+Reservation.create({
+  flight_id:f1.id,
+  user_id:u3.id,
+  res_col:6,
+  res_row:5
+});
+
+Reservation.create({
+  flight_id:f4.id,
+  user_id:u2.id,
+  res_col:10,
+  res_row:20
 });

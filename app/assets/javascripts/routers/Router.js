@@ -3,13 +3,11 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
 
   routes: {
-
     '': 'initializeApp',
     'search': 'initializeSearchFlights',
     'flights/:id': 'showFlightPlan',
     '*error': 'error'
   },
-
 
 
   showFlightPlan: function ( id ) {
@@ -30,6 +28,5 @@ app.Router = Backbone.Router.extend({
   //   var seatView = new app.SeatView();
   //   seatView.render();
   // }
-
 
 });

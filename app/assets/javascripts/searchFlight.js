@@ -11,6 +11,7 @@ $(document).ready(function(){
   app.searchFlight = new app.Flights();
   app.searchFlight.fetch();
 
+
   app.router = new app.Router();
   Backbone.history.start();
 
@@ -19,5 +20,7 @@ $(document).ready(function(){
   // window.setInterval( function(){
   //   app.reservations.fetch();
   // },2000);
+
+  
 
 });
