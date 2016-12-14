@@ -1,3 +1,6 @@
+<div class="container center">
+  <div class="card-panel">
+
 <%= form_for(@flight) do |f| %>
   <% if @flight.errors.any? %>
     <div id="error_explanation">
@@ -10,11 +13,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :plane_id %><br>
-    <%= f.number_field :plane_id %>
-  </div>
   <div class="field">
     <%= f.label :flight_num %><br>
     <%= f.number_field :flight_num %>
@@ -32,6 +30,8 @@
     <%= f.datetime_select :departure_date %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn blue darken-4" %>
   </div>
 <% end %>
+  </div>
+</div>

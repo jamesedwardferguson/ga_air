@@ -1,4 +1,13 @@
 User.destroy_all
+
+  User.create({
+    first_name: "Tim",
+    last_name: "Silva",
+    email: "silva.tim@gmail.com",
+    password:"chicken",
+    password_confirmation: "chicken"
+  });
+
 5.times do
   User.create({
     first_name: Faker::Name.first_name,
@@ -6,40 +15,46 @@ User.destroy_all
     email: Faker::Internet.email,
     password:"chicken",
     password_confirmation: "chicken"
-
   });
 
 end
 
-a1 =  Airplane.create({
+Airplane.destroy_all
+
+a1 = Airplane.create({
   column: 32,
   row: 4,
-  plane_num: Faker::Number.number(4)
+  plane_num:"a380",
+  plane_type:"Airbus"
  });
 
-a2 =  Airplane.create({
+a2 = Airplane.create({
   column: 32,
   row: 4,
-  plane_num: Faker::Number.number(4)
+  plane_num:"747",
+  plane_type:"Boeing"
  });
 
-a3 =  Airplane.create({
+a3 = Airplane.create({
   column: 32,
   row: 4,
-  plane_num: Faker::Number.number(4)
+  plane_num:"777",
+  plane_type:"Boeing"
  });
 
 
-a4 =  Airplane.create({
+a4 = Airplane.create({
   column: 32,
   row: 4,
-  plane_num: Faker::Number.number(4)
+  plane_num:"a320",
+  plane_type:"Airbus"
  });
 
-a5 =  Airplane.create({
+a5 = Airplane.create({
   column: 32,
   row: 4,
-  plane_num: Faker::Number.number(4)
+  plane_num:"737",
+  plane_type:"Boeing"
  });
 
 Flight.destroy_all

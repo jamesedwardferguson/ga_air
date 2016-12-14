@@ -21,9 +21,13 @@
   </div>
   <div class="field">
     <%= f.label :plane_num %><br>
-    <%= f.number_field :plane_num %>
+    <%= f.text_field :plane_num %>
+  </div>
+  <div class="field">
+    <%= f.label :plane_type %><br>
+    <%= f.text_field :plane_type %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn blue darken-4"  %>
   </div>
 <% end %>

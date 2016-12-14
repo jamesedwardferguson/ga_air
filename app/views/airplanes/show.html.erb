@@ -3,21 +3,24 @@
     <p id="notice"><%= notice %></p>
 
   <p>
-    <strong>Row:</strong>
+    <strong>Plane</strong>
+    <%= full_plane_name(@airplane) %>
+  </p>
+  <p>
+    <strong>Total Seats:</strong>
+    <%=num_seats(@airplane) %>
+  </p>
+  <p>
+    <strong>Rows:</strong>
     <%= @airplane.row %>
   </p>
 
   <p>
-    <strong>Column:</strong>
+    <strong>Columns:</strong>
     <%= @airplane.column %>
   </p>
 
-  <p>
-    <strong>Plane num:</strong>
-    <%= @airplane.plane_num %>
-  </p>
-
-  <%= link_to 'Edit', edit_airplane_path(@airplane) %> |
-  <%= link_to 'Back', airplanes_path %>
+  <%= link_to 'Edit', edit_airplane_path(@airplane), :class => "btn blue darken-4"  %> |
+  <%= link_to 'Back', airplanes_path, :class => "btn blue darken-4"  %>
  </div>
 <div>

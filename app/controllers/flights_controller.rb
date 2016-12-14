@@ -5,6 +5,7 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
+    @airplane = Airplane.find(params[:airplane_id])
   end
 
   # GET /flights/1
