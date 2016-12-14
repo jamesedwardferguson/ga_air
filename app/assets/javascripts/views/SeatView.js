@@ -6,7 +6,7 @@ app.SeatView = Backbone.View.extend({
 
   render: function(){
     console.log("SeatView should be showing");
-    
+
     var SeatInputViewTemplate = $("#SeatInputViewTemplate").html();
     this.$el.html(SeatInputViewTemplate);
     console.log(this.$el);
@@ -14,13 +14,13 @@ app.SeatView = Backbone.View.extend({
 });
 
 
-var rows = this.model.get('row');
-var columns = this.model.get('column');
-console.log(rows);
+// var rows = this.model.get('row');
+// var columns = this.model.get('column');
+// console.log(rows);
 
-for (i = 0; i < .rows; i++) {
-      var _row = $();
-    }
-      for (j = 0; j < .columns; j++) {
-        var _column
-      }
+// for (i = 0; i < .rows; i++) {
+//       var _row = $();
+//     }
+//       for (j = 0; j < .columns; j++) {
+//         var _column
+//       }
