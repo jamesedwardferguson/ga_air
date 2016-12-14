@@ -9,10 +9,11 @@ app.AppView = Backbone.View.extend({
     console.log("app.AppView should be on the page");
     var AppViewTemplate = $("#AppViewTemplate").html();
     this.$el.html( AppViewTemplate );
+    console.log(this.$el);
     // Get the HTML from #AppViewTemplate
     // Set the HTML of this.$el
-
-    var flightinputView = new app.FlightinputView();
-    flightinputView.render();
+    // AppViewTemplate.render()
+    // var flightinputView = new app.FlightinputView();
+    // flightinputView.render();
   }
 });

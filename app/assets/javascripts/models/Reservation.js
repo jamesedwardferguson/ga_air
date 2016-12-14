@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 // var app = app || {};
 //
 // app.Reservation = Backbone.Model.extend({
@@ -12,3 +15,4 @@
 // });
 //
 // var r = new app.Reservation();
+>>>>>>> 9b2db8cba7af7f159dd854a53e9707a1db232078

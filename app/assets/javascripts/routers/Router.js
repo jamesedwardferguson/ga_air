@@ -3,12 +3,20 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
 
   routes: {
-    '': 'initializeSearchFlights',
+
+    '': 'initializeApp',
+    'search': 'initializeSearchFlights',
     '*error': 'error'
   },
 
-  initializeSearchFlights: function(){
-    var searchView = new app.SearchView();
-    searchView.render();
+
+  initializeApp: function() {
+    var appView = new app.AppView();
+    appView.render();
+  },
+
+  initializeSelectSeat: function(){
+    var seatView = new app.SeatView();
+    seatView.render();
   }
 });
