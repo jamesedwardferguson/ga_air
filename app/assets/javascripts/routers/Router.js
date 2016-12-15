@@ -16,17 +16,33 @@ app.Router = Backbone.Router.extend({
   },
 
   showFlightPlan: function ( id ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 10e559e2445d92148301ebd7a1131bafff156218
     console.log( id );
     var flight = app.searchFlight.get( id );
+
     var seatView = new app.SeatView({
       model: flight
     });
+<<<<<<< HEAD
   //   window.setInterval(function(){
   //   seatView.render( id );
   // },2000 );
+=======
+
+
+>>>>>>> 10e559e2445d92148301ebd7a1131bafff156218
     seatView.render( id );
   },
 
 
+    var flightInfo = new app.FlightInfo({
+      model: flight
+    });
+
+    flightInfo.render();
+  },
 
 });
