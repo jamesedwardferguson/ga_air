@@ -21,13 +21,18 @@ app.Router = Backbone.Router.extend({
     // You'll also need to create a new template for this view in <script> tags
     console.log( id );
     var flight = app.searchFlight.get( id );
+
     var seatView = new app.SeatView({
       model: flight
     });
+
     seatView.render( id );
-  }
 
+    var flightInfo = new app.FlightInfo({
+      model: flight
+    });
 
-
+    flightInfo.render();
+  },
 
 });
