@@ -4,7 +4,6 @@ app.SearchInputView = Backbone.View.extend({
 
   el: "#searchForm",
 
-  // Attach events
   events: {
     'click button': 'searchFlight'
   },
@@ -18,18 +17,8 @@ app.SearchInputView = Backbone.View.extend({
       return flight.get("origin").startsWith(inputOrigin) && flight.get("destination").startsWith(inputDestination);
     });
 
-
-    //   {
-    //   destination: inputDestination,
-    //   origin: inputOrigin
-    // });
-
-    // console.log(searchFlight);
-
     createFlightView(searchFlight);
 
-        // get flights.where({:desination => inputDestination, :origin => inputDestination})
-    // re-render the flight list view
   },
 
   render: function(){
@@ -45,14 +34,6 @@ app.SearchInputView = Backbone.View.extend({
     var searchFlight = app.searchFlight.filter(function (flight) {
       return flight.get("origin").startsWith(inputOrigin) && flight.get("destination").startsWith(inputDestination);
     });
-
-
-    //   {
-    //   destination: inputDestination,
-    //   origin: inputOrigin
-    // });
-
-    // console.log(searchFlight);
 
     createFlightView(searchFlight);
   }

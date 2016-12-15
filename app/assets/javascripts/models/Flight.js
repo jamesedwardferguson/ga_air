@@ -19,5 +19,5 @@ app.Flight = Backbone.Model.extend({
 });
 
 var flight = new app.Flight();
-
-flight.fetch("origin", "destination", "departure_date", "flight_num", "airplane");
+flight.fetch();
+// flight.fetch("origin", "destination", "departure_date", "flight_num", "airplane");

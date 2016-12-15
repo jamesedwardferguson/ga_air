@@ -9,5 +9,6 @@ app.FlightInfo = Backbone.View.extend({
 
     var FlightInfoTemplate = $("#FlightInfoTemplate").html();
     this.$el.html(FlightInfoTemplate);
+
   }
 });

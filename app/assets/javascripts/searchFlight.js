@@ -9,7 +9,6 @@ $(document).ready(function(){
   app.searchFlight = new app.Flights();
   app.searchFlight.fetch().done(function () {
 
-
     app.router = new app.Router();
     Backbone.history.start();
   });
