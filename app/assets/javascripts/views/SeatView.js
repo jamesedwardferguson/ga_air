@@ -15,9 +15,11 @@ app.SeatView = Backbone.View.extend({
     console.log(this.$el);
 
 
+
     var $table = $("#mytab1");
     var $th = $("<th></th>").html();
       $table.append($th);
+
 
       for (var i = 1; i <= rows; i++) {
         var $tr = $("<tr></tr>").html("");
