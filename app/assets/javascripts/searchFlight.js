@@ -9,11 +9,13 @@ $(document).ready(function(){
   }
 
   app.searchFlight = new app.Flights();
-  app.searchFlight.fetch();
+  app.searchFlight.fetch().done(function () {
 
 
-  app.router = new app.Router();
-  Backbone.history.start();
+    app.router = new app.Router();
+    Backbone.history.start();
+
+  });
 
   // Here is when they want to pay attention to the hash fragments
 
@@ -21,6 +23,6 @@ $(document).ready(function(){
   //   app.reservations.fetch();
   // },2000);
 
-  
+
 
 });

@@ -14,8 +14,12 @@ app.Router = Backbone.Router.extend({
     // Create a new instance of a new view
     // Render it.
     // You'll also need to create a new template for this view in <script> tags
-    var seatView = new app.SeatView();
-    seatView.render();
+    console.log( id );
+    var flight = app.searchFlight.get( id );
+    var seatView = new app.SeatView({
+      model: flight
+    });
+    seatView.render( id );
   },
 
   initializeApp: function() {
