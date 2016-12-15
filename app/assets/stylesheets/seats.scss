@@ -14,3 +14,17 @@ span {
 info {
   border: 1px solid orange;
 }
+tr td {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5px;
+}
+
+tr th {
+  text-align: center;
+}
+
+#aisle{
+  border-top: 0px;
+  border-bottom: 0px;
+}
