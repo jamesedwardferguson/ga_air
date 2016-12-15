@@ -5,8 +5,7 @@
 #  id         :integer          not null, primary key
 #  row        :integer
 #  column     :integer
-#  plane_num  :string
-#  type       :string
+#  plane_num  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
