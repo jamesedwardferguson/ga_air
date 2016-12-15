@@ -10,15 +10,21 @@ app.SearchInputView = Backbone.View.extend({
   },
 
   searchFlight: function(e){
+
     var inputOrigin = this.$el.find("#origin").val();
     var inputDestination = this.$el.find("#destination").val();
 
-    var searchFlight = app.searchFlight.where({
-      destination: inputDestination,
-      origin: inputOrigin
+    var searchFlight = app.searchFlight.filter(function (flight) {
+      return flight.get("origin").startsWith(inputOrigin) && flight.get("destination").startsWith(inputDestination);
     });
 
-    console.log(searchFlight);
+
+    //   {
+    //   destination: inputDestination,
+    //   origin: inputOrigin
+    // });
+
+    // console.log(searchFlight);
 
     createFlightView(searchFlight);
 
@@ -32,5 +38,22 @@ app.SearchInputView = Backbone.View.extend({
     var fvTemplate = $('#SearchInputTemplate').html();
     console.log( fvTemplate );
     this.$el.html(fvTemplate);
+
+    var inputOrigin = this.$el.find("#origin").val();
+    var inputDestination = this.$el.find("#destination").val();
+
+    var searchFlight = app.searchFlight.filter(function (flight) {
+      return flight.get("origin").startsWith(inputOrigin) && flight.get("destination").startsWith(inputDestination);
+    });
+
+
+    //   {
+    //   destination: inputDestination,
+    //   origin: inputOrigin
+    // });
+
+    // console.log(searchFlight);
+
+    createFlightView(searchFlight);
   }
 });
