@@ -5,7 +5,7 @@ app.AppView = Backbone.View.extend({
 
   render: function(){
     console.log("app.Searchview should be on the page");
-    
+
     var searchViewTemplate = $('#SearchViewTemplate').html();
     this.$el.html(searchViewTemplate);
 

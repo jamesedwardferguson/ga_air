@@ -2,8 +2,6 @@ var app = app || {};
 
 $(document).ready(function(){
 
-  // Am I on the Backbone page?
-    // Should I actually create these collections and show the views?
   if($("#app").length === 0){
     return false;
   }
@@ -11,16 +9,10 @@ $(document).ready(function(){
   app.searchFlight = new app.Flights();
   app.searchFlight.fetch().done(function () {
 
-    console.log("Getting here");
-    app.router = new app.Router();
 
+    app.router = new app.Router();
+    Backbone.history.start();
   });
 
-    Backbone.history.start();
-  // Here is when they want to pay attention to the hash fragments
-
-  // window.setInterval( function(){
-  //   app.reservations.fetch();
-  // },2000);
 
 });
