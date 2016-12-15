@@ -24,9 +24,5 @@ app.Router = Backbone.Router.extend({
 
   },
 
-  // initializeSelectSeat: function(){
-  //   var seatView = new app.SeatView();
-  //   seatView.render();
-  // }
 
 });
