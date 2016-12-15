@@ -14,8 +14,6 @@ app.SeatView = Backbone.View.extend({
     console.log(this.$el);
 
 
-    var fiv = new app.FlightInfo();
-    fiv.render();
 
   }
 });
