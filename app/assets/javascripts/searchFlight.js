@@ -9,13 +9,20 @@ $(document).ready(function(){
   }
 
   app.searchFlight = new app.Flights();
+  // app.searchFlight.fetch();
   app.searchFlight.fetch().done(function () {
 
-
+    // createFlightView(app.searchFlight);
     app.router = new app.Router();
     Backbone.history.start();
 
   });
+
+  // app.SearchInputView.fecth().done(function(){
+  //
+  // });
+
+
 
   // Here is when they want to pay attention to the hash fragments
 
