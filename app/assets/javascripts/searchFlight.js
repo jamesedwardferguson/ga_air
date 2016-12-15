@@ -11,18 +11,16 @@ $(document).ready(function(){
   app.searchFlight = new app.Flights();
   app.searchFlight.fetch().done(function () {
 
-
+    console.log("Getting here");
     app.router = new app.Router();
-    Backbone.history.start();
 
   });
 
+    Backbone.history.start();
   // Here is when they want to pay attention to the hash fragments
 
   // window.setInterval( function(){
   //   app.reservations.fetch();
   // },2000);
-
-
 
 });
