@@ -1,10 +1,10 @@
 var app = app || {};
 
 app.FlightView = Backbone.View.extend({
-
   tagName: 'tr',
 
   render: function(){
+    // Render each of the flights and insert it into the table
     var origin = this.model.get("origin");
     var $origin = $("<td>").text( origin );
     this.$el.append( $origin );
