@@ -16,12 +16,14 @@ app.Router = Backbone.Router.extend({
   },
 
   showFlightPlan: function ( id ) {
-    
     console.log( id );
     var flight = app.searchFlight.get( id );
     var seatView = new app.SeatView({
       model: flight
     });
+  //   window.setInterval(function(){
+  //   seatView.render( id );
+  // },2000 );
     seatView.render( id );
   },
 

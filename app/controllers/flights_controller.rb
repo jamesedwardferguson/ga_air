@@ -2,7 +2,7 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
   def home
-    
+
   end
 
   # GET /flights
@@ -77,6 +77,6 @@ class FlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
-      params.require(:flight).permit(:plane_id, :flight_num, :origin, :destination, :departure_date)
+      params.require(:flight).permit(:plane_type, :plane_id, :flight_num, :origin, :destination, :departure_date)
     end
 end

@@ -11,6 +11,12 @@ $(document).ready(function(){
 
     app.router = new app.Router();
     Backbone.history.start();
+
+    // app.bookings = new app.Reservations();
+    // window.setInterval( function() {
+    //   console.log(app.bookings);
+    //   app.bookings.fetch();
+    // },2000);
   });
 
 
