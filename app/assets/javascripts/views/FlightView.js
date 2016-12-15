@@ -31,10 +31,9 @@ app.FlightView = Backbone.View.extend({
     'click #selectedFlight': 'selectSeatPage'
   },
 
+  //navigate to another route when flight is clicked
   selectSeatPage: function(){
     app.router.navigate("/flights/" + this.model.get('id'), true);
-    // We need to create a reservations collection.
-    // Then we need to render a view for every reservation in that collection (the seats on the flight)
   },
 
 });

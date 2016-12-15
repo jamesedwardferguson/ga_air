@@ -124,27 +124,27 @@ Reservation.create({
 Reservation.create({
   flight_id:f4.id,
   user_id:u4.id,
-  res_col:1,
-  res_row:5
+  res_col:3,
+  res_row:3
 });
 
 Reservation.create({
   flight_id:f3.id,
   user_id:u4.id,
-  res_col:9,
+  res_col:3,
   res_row:2
 });
 
 Reservation.create({
   flight_id:f1.id,
   user_id:u3.id,
-  res_col:6,
-  res_row:5
+  res_col:1,
+  res_row:4
 });
 
 Reservation.create({
   flight_id:f4.id,
   user_id:u2.id,
-  res_col:10,
-  res_row:20
+  res_col:2,
+  res_row:2
 });
